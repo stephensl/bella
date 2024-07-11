@@ -1,0 +1,1517 @@
+
+Randomized with seed 8723
+
+colleges/edit.html.erb
+[33m  add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/edit.html.erb_spec.rb (PENDING: Not yet implemented)[0m
+
+CollegeApiService
+  #save_colleges
+[31m    saves colleges to the database (FAILED - 1)[0m
+  #fetch_colleges
+[31m    returns an array of colleges (FAILED - 2)[0m
+
+College
+[32m  is valid with valid attributes[0m
+[32m  is not valid without an average_class_size[0m
+[32m  is not valid without a freshmen_class_size[0m
+[32m  is not valid without a diversity_percentage[0m
+[32m  is not valid without a financial_aid_percentage[0m
+[32m  is not valid without a retention_rate[0m
+[32m  is not valid without a freshmen_living_on_campus_percentage[0m
+[32m  is not valid without a total_cost_in_state[0m
+[32m  is not valid without a state[0m
+[32m  is not valid without a graduation_rate_6yr[0m
+[32m  is not valid without a student_to_faculty_ratio[0m
+[32m  is not valid without an acceptance_rate[0m
+[32m  is not valid without an on_campus_living_requirement[0m
+[32m  is not valid without a school_name[0m
+[32m  is not valid without a total_cost_out_state[0m
+[32m  is not valid without a graduation_rate_4yr[0m
+[32m  is not valid without a city[0m
+
+CollegesHelper
+[33m  add some examples to (or delete) /Users/lawton/Desktop/bella/spec/helpers/colleges_helper_spec.rb (PENDING: Not yet implemented)[0m
+
+colleges/show.html.erb
+[33m  add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/show.html.erb_spec.rb (PENDING: Not yet implemented)[0m
+
+colleges/index.html.erb
+[33m  add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/index.html.erb_spec.rb (PENDING: Not yet implemented)[0m
+
+Colleges
+  GET /index
+[31m    returns http success (FAILED - 3)[0m
+  GET /edit
+[31m    returns http success (FAILED - 4)[0m
+  GET /show
+[31m    returns http success (FAILED - 5)[0m
+  GET /new
+[32m    returns http success[0m
+
+CollegesController
+  DELETE #destroy
+[31m    destroys the requested college (FAILED - 6)[0m
+[31m    redirects to the colleges list (FAILED - 7)[0m
+  PUT #update
+    with invalid parameters
+[31m      renders the edit template again (FAILED - 8)[0m
+    with valid parameters
+[31m      updates the requested college (FAILED - 9)[0m
+[31m      redirects to the college (FAILED - 10)[0m
+  POST #create
+    with invalid parameters
+[31m      does not create a new College (FAILED - 11)[0m
+[31m      renders the new template again (FAILED - 12)[0m
+    with valid parameters
+[31m      redirects to the created college (FAILED - 13)[0m
+[31m      creates a new College (FAILED - 14)[0m
+  GET #new
+[31m    returns a success response (FAILED - 15)[0m
+  GET #edit
+[31m    returns a success response (FAILED - 16)[0m
+  GET #index
+[31m    returns a success response (FAILED - 17)[0m
+  GET #show
+[31m    returns a success response (FAILED - 18)[0m
+
+colleges/new.html.erb
+[33m  add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/new.html.erb_spec.rb (PENDING: Not yet implemented)[0m
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+[33m
+  1) colleges/edit.html.erb add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/edit.html.erb_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/views/colleges/edit.html.erb_spec.rb:4
+[0m[33m
+  2) CollegesHelper add some examples to (or delete) /Users/lawton/Desktop/bella/spec/helpers/colleges_helper_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/helpers/colleges_helper_spec.rb:14
+[0m[33m
+  3) colleges/show.html.erb add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/show.html.erb_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/views/colleges/show.html.erb_spec.rb:4
+[0m[33m
+  4) colleges/index.html.erb add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/index.html.erb_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/views/colleges/index.html.erb_spec.rb:4
+[0m[33m
+  5) colleges/new.html.erb add some examples to (or delete) /Users/lawton/Desktop/bella/spec/views/colleges/new.html.erb_spec.rb[0m
+     [36m# Not yet implemented[0m
+[36m     # ./spec/views/colleges/new.html.erb_spec.rb:4
+[0m
+
+Failures:
+
+  1) CollegeApiService#save_colleges saves colleges to the database
+     [31mFailure/Error: expect { service.save_colleges }.to change(College, :count).by_at_least(1)[0m
+     [31m  expected `College.count` to have changed by at least 1, but was changed by 0[0m
+     [36m# ./spec/services/college_api_service_spec.rb:21:in `block (4 levels) in <main>'[0m
+     [36m# ./spec/services/college_api_service_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  2) CollegeApiService#fetch_colleges returns an array of colleges
+     [31mFailure/Error: expect(colleges.first).to have_key("school.name")[0m
+     [31m  expected nil to respond to `has_key?`[0m
+     [36m# ./spec/services/college_api_service_spec.rb:13:in `block (4 levels) in <main>'[0m
+     [36m# ./spec/services/college_api_service_spec.rb:10:in `block (3 levels) in <main>'[0m
+
+  3) Colleges GET /index returns http success
+     [31mFailure/Error: expect(response).to have_http_status(:success)[0m
+     [31m  expected the response to have a success status code (2xx) but it was 404[0m
+     [36m# ./spec/requests/colleges_spec.rb:7:in `block (3 levels) in <main>'[0m
+
+  4) Colleges GET /edit returns http success
+     [31mFailure/Error: expect(response).to have_http_status(:success)[0m
+     [31m  expected the response to have a success status code (2xx) but it was 404[0m
+     [36m# ./spec/requests/colleges_spec.rb:28:in `block (3 levels) in <main>'[0m
+
+  5) Colleges GET /show returns http success
+     [31mFailure/Error: expect(response).to have_http_status(:success)[0m
+     [31m  expected the response to have a success status code (2xx) but it was 404[0m
+     [36m# ./spec/requests/colleges_spec.rb:14:in `block (3 levels) in <main>'[0m
+
+  6) CollegesController DELETE #destroy destroys the requested college
+     [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+     [31m[0m
+     [31mTypeError:[0m
+     [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+     [31m            \A[0m
+     [31m            (?:(?<prefix>.*)\/)?[0m
+     [31m            (?<partial>_)?[0m
+     [31m            (?<action>.*?)[0m
+     [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+     [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+     [31m            (?:\+(?<variant>[^.]*))??[0m
+     [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+     [31m            \z[0m
+     [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+     [36m# [0m
+     [36m#   Showing full backtrace because every line was filtered out.[0m
+     [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+     [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  7) CollegesController DELETE #destroy redirects to the colleges list
+     [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+     [31m[0m
+     [31mTypeError:[0m
+     [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+     [31m            \A[0m
+     [31m            (?:(?<prefix>.*)\/)?[0m
+     [31m            (?<partial>_)?[0m
+     [31m            (?<action>.*?)[0m
+     [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+     [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+     [31m            (?:\+(?<variant>[^.]*))??[0m
+     [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+     [31m            \z[0m
+     [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+     [36m# [0m
+     [36m#   Showing full backtrace because every line was filtered out.[0m
+     [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+     [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  8) CollegesController PUT #update with invalid parameters renders the edit template again
+     [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+     [31m[0m
+     [31mTypeError:[0m
+     [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+     [31m            \A[0m
+     [31m            (?:(?<prefix>.*)\/)?[0m
+     [31m            (?<partial>_)?[0m
+     [31m            (?<action>.*?)[0m
+     [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+     [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+     [31m            (?:\+(?<variant>[^.]*))??[0m
+     [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+     [31m            \z[0m
+     [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+     [36m# [0m
+     [36m#   Showing full backtrace because every line was filtered out.[0m
+     [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+     [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  9) CollegesController PUT #update with valid parameters updates the requested college
+     [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+     [31m[0m
+     [31mTypeError:[0m
+     [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+     [31m            \A[0m
+     [31m            (?:(?<prefix>.*)\/)?[0m
+     [31m            (?<partial>_)?[0m
+     [31m            (?<action>.*?)[0m
+     [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+     [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+     [31m            (?:\+(?<variant>[^.]*))??[0m
+     [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+     [31m            \z[0m
+     [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+     [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+     [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+     [36m# [0m
+     [36m#   Showing full backtrace because every line was filtered out.[0m
+     [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+     [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  10) CollegesController PUT #update with valid parameters redirects to the college
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  11) CollegesController POST #create with invalid parameters does not create a new College
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  12) CollegesController POST #create with invalid parameters renders the new template again
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  13) CollegesController POST #create with valid parameters redirects to the created college
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  14) CollegesController POST #create with valid parameters creates a new College
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  15) CollegesController GET #new returns a success response
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  16) CollegesController GET #edit returns a success response
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  17) CollegesController GET #index returns a success response
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+  18) CollegesController GET #show returns a success response
+      [31mFailure/Error: raise TypeError, "#{path.inspect} is not a valid path: must be a String, Pathname, or Resolver"[0m
+      [31m[0m
+      [31mTypeError:[0m
+      [31m  #<RSpec::Rails::ViewRendering::EmptyTemplateResolver::ResolverDecorator:0x0000000126817898 @resolver=#<ActionView::FileSystemResolver:0x000000012551c950 @unbound_templates=#<Concurrent::Map:0x000000012551c900 entries=3 default_proc=nil>, @path_parser=#<ActionView::Resolver::PathParser:0x0000000126078308 @regex=/[0m
+      [31m            \A[0m
+      [31m            (?:(?<prefix>.*)\/)?[0m
+      [31m            (?<partial>_)?[0m
+      [31m            (?<action>.*?)[0m
+      [31m            (?:\.(?<locale>(?-mix:en|(?-mix:[a-z]{2}(?:[-_][A-Z]{2})?))))??[0m
+      [31m            (?:\.(?<format>(?-mix:html|text|js|css|ics|csv|vcf|vtt|png|jpeg|gif|bmp|tiff|svg|webp|mpeg|mp3|ogg|m4a|webm|mp4|otf|ttf|woff|woff2|xml|rss|atom|yaml|multipart_form|url_encoded_form|json|pdf|zip|gzip|turbo_stream)))??[0m
+      [31m            (?:\+(?<variant>[^.]*))??[0m
+      [31m            (?:\.(?<handler>(?-mix:raw|erb|html|builder|ruby|jbuilder)))?[0m
+      [31m            \z[0m
+      [31m          /x>, @path="/Users/lawton/Desktop/bella/app/views">> is not a valid path: must be a String, Pathname, or Resolver[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:79:in `block in typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:68:in `typecast'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/path_set.rb:19:in `initialize'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `new'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:35:in `_build_view_paths'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/actionview-7.1.3.4/lib/action_view/view_paths.rb:69:in `view_paths='[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/view_rendering.rb:153:in `block (2 levels) in <module:ViewRendering>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:365:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `reverse_each'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:484:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:505:in `run_before_example'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:261:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/example/controller_example_group.rb:192:in `block (2 levels) in <module:ControllerExampleGroup>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-rails-5.1.2/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/webmock-3.23.1/lib/webmock/rspec.rb:39:in `block (2 levels) in <main>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/rspec:25:in `<top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:58:in `kernel_load'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli/exec.rb:23:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:455:in `exec'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/command.rb:28:in `run'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:35:in `dispatch'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/vendor/thor/lib/thor/base.rb:584:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/cli.rb:29:in `start'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:28:in `block in <top (required)>'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/3.3.0/bundler/friendly_errors.rb:117:in `with_friendly_errors'[0m
+      [36m# /usr/local/Cellar/ruby/3.3.4/lib/ruby/gems/3.3.0/gems/bundler-2.5.14/exe/bundle:20:in `<top (required)>'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'[0m
+      [36m# /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'[0m
+      [36m# [0m
+      [36m#   Showing full backtrace because every line was filtered out.[0m
+      [36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+      [36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+
+Finished in 2.7 seconds (files took 3.07 seconds to load)
+[31m41 examples, 18 failures, 5 pending[0m
+
+Failed examples:
+
+[31mrspec ./spec/services/college_api_service_spec.rb:19[0m [36m# CollegeApiService#save_colleges saves colleges to the database[0m
+[31mrspec ./spec/services/college_api_service_spec.rb:9[0m [36m# CollegeApiService#fetch_colleges returns an array of colleges[0m
+[31mrspec ./spec/requests/colleges_spec.rb:5[0m [36m# Colleges GET /index returns http success[0m
+[31mrspec ./spec/requests/colleges_spec.rb:26[0m [36m# Colleges GET /edit returns http success[0m
+[31mrspec ./spec/requests/colleges_spec.rb:12[0m [36m# Colleges GET /show returns http success[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:103[0m [36m# CollegesController DELETE #destroy destroys the requested college[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:110[0m [36m# CollegesController DELETE #destroy redirects to the colleges list[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:94[0m [36m# CollegesController PUT #update with invalid parameters renders the edit template again[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:78[0m [36m# CollegesController PUT #update with valid parameters updates the requested college[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:85[0m [36m# CollegesController PUT #update with valid parameters redirects to the college[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:58[0m [36m# CollegesController POST #create with invalid parameters does not create a new College[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:65[0m [36m# CollegesController POST #create with invalid parameters renders the new template again[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:51[0m [36m# CollegesController POST #create with valid parameters redirects to the created college[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:45[0m [36m# CollegesController POST #create with valid parameters creates a new College[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:29[0m [36m# CollegesController GET #new returns a success response[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:36[0m [36m# CollegesController GET #edit returns a success response[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:13[0m [36m# CollegesController GET #index returns a success response[0m
+[31mrspec ./spec/controllers/colleges_controller_spec.rb:21[0m [36m# CollegesController GET #show returns a success response[0m
+
+Randomized with seed 8723
+

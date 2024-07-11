@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.data.gov/ed/collegescorecard/v1/schools?api_key=test_api_key&fields=school.name,school.state,school.city,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,latest.admissions.admission_rate.overall,latest.student.size,latest.student.demographics.freshmen,latest.student.demographics.freshmen_on_campus,latest.completion.completion_rate_4yr_150nt,latest.completion.completion_rate_6yr_150nt,school.zip,school.lat,school.lon,school.campus.housing,latest.student.demographics.percent_minority,latest.student.size,latest.academics.program_percentage.marine_biology,latest.aid.pct_federal_loan_receipt,latest.student.retention_rate,latest.academics.program_percentage.marine_biology&per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.data.gov
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Thu, 11 Jul 2024 00:45:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+      Vary:
+      - Accept-Encoding
+      X-Api-Umbrella-Request-Id:
+      - cgjt0eeevuo6isn3rdq0
+      X-Cache:
+      - MISS
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 14870f86-01e7-43a2-7ba2-dddd3b7ecea9
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "code": "API_KEY_INVALID",
+            "message": "An invalid api_key was supplied. Get one at https://api.data.gov:443"
+          }
+        }
+  recorded_at: Thu, 11 Jul 2024 00:45:49 GMT
+recorded_with: VCR 6.2.0

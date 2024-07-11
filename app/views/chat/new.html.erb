@@ -1,0 +1,16 @@
+<h1>Ask a Question about Colleges</h1>
+
+<%= form_with url: chat_path, local: true do %>
+  <div class="field">
+    <%= label_tag :question %>
+    <%= text_area_tag :question %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Ask" %>
+  </div>
+<% end %>
+
+<% if @response.present? %>
+  <h2>Response:</h2>
+  <p><%= @response['choices'].first['text'] %></p>
+<% end %>
